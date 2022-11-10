@@ -23,7 +23,7 @@ const Intro = () => {
       <Emo.DefaultContainer>
         <Emo.TitleBox textalign='center' marginbottom='10rem'>
           <h3>
-            Section's Title
+            Section&apos;s Title
           </h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />

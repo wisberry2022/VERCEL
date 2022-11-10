@@ -52,7 +52,7 @@ const Effect = () => {
     <Emo.Section className="effectSection">
       <Emo.DefaultContainer display='flex' flexdirect='column' justifycontent='space-between' gap='2.5rem' className="container">
         <Emo.TitleBox marginbottom='5rem' textalign='center'>
-          <h3>ELM'S Symbol</h3>
+          <h3>ELM&apos;S Symbol</h3>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla suscipit rem libero.</p>
         </Emo.TitleBox>
         <div className="canvasArea top">
@@ -62,7 +62,7 @@ const Effect = () => {
         </div>
         <Emo.CustomFlexDiv flexdirection='column' alignitems='center' gap='5.5rem' className="bottom">
           <div className="semiTitleBox">
-            <h4>ELM's Record</h4>
+            <h4>ELM&apos;s Record</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <Chart />

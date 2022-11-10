@@ -12,7 +12,7 @@ const Footer = () => {
           <ul className="footerList">
             {footerList.map((it, idx) => {
               return (
-                <li>
+                <li key={idx}>
                   <Link href="#">
                     {it}
                   </Link>
