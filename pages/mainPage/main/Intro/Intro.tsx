@@ -17,7 +17,7 @@ const Template = ({ dataSet }) => {
 }
 
 const Intro = () => {
-  const data: object[] = useSelector(state => state.introSlice);
+  const data: object[] = useSelector((state: any) => state.introSlice);
   return (
     <Emo.Section className="introSection">
       <Emo.DefaultContainer>

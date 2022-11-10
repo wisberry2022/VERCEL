@@ -5,7 +5,7 @@ import { OrbitControls } from '@react-three/drei';
 import * as Emo from '../../../../styles/Styled';
 import { useRef } from 'react';
 import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement } from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, ChartData, ChartOptions, ChartDataset } from 'chart.js';
 
 const CanvasBox = () => {
   const meshRef = useRef(null);
@@ -27,22 +27,27 @@ const CanvasBox = () => {
 }
 
 const Chart = () => {
-  ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement)
-  const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
-    datasets: [
-      {
-        type: 'line',
-        label: 'Dataset 1',
-        data: [10, 15, 20, 35, 49, 51, 43, 49],
-        borderColor: '#F1B0BC',
-        backgroundColor: '#97CDBD',
-      }
-    ]
+  interface LineProps {
+    options: ChartOptions<'line'>;
+    data: ChartDataset<'line'>;
   }
+  ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement)
   return (
     <div className="chartBox">
-      <Line data={data}></Line>
+      <Line data={
+        {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
+          datasets: [
+            {
+              type: 'line',
+              label: 'Dataset 1',
+              data: [10, 15, 20, 35, 49, 51, 43, 49],
+              borderColor: '#F1B0BC',
+              backgroundColor: '#97CDBD',
+            }
+          ]
+        }
+      }></Line>
     </div>
   )
 }
